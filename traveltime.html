@@ -3,22 +3,22 @@
 <head>
   <title>Bike, bus, car, or walk?</title>
   <link href="travel.css" type="text/css" rel="stylesheet" />
-  <script type="text/javascript" src="traveltime.js"></script>
 </head>
 <body>
-  <header>
-    <div>
-      <ul class="tophead">
-        <li><a href="traveltime.html">Home</a></li>
-        <li><a href="vtype.html">Vehicle Objects</a></li> 
-        <li><a href="route.html">Route Objects</a></li> 
-        <li><a href="">Test</a></li> 
-        <li><a href="">Test</a></li> 
-      </ul>
-    </div>
-  </header>
-  <main>
-    <article id="left">
+  <div id="content">
+    <header>
+      <div id="topbox">
+        <ul class="tophead">
+          <li id="headline">WALK, BUS, BIKE or DRIVE</li>
+          <li><a href="traveltime.html">Home</a></li>
+          <li><a href="vtype.html">Vehicle Objects</a></li> 
+          <li><a href="route.html">Route Objects</a></li> 
+        </ul>
+      </div>
+    </header>
+    <main>
+    
+    <article id="left" class="green">
       <h1>The Challenge</h1>
         <p>I knew I wanted to find a way to make an interactive script that could compare travel times of several different transportation options against each other and using an a actual route as a model. The stretch between Seattle Center and 15th Ave E on Capitol Hill is a central and well known route in Seattle and the travel times can vary significantly depending on the time of day. There were so many factors to consider and I had to limit them carefully wihtout making it too complicated or too unrealistic. I knew that I would have to manufacture data as I don't have time to submit a FoIA reqeust for traffic research, but I still wanted it to reflect my actual experiences of traveling up "The Hill."</p>
       <h2>Factors to Consider</h1>
@@ -34,16 +34,37 @@
           <li>I wanted to do a cost comparison, but only the bus and the car have direct amounts for my test route, and gas isn't really relevent on a two mile trip.</li> 
           <li>Individuals might travel very differently depending on their driving habits and physical ability. The legal speed limit might not apply to those with lead feet and experienced cyclists might go a lot faster than me up the hills. Perhaps a future model could factor all of these in, but I'd start first with making each variable scientifically accurate before addingh more.</li>
           <li>Bikes don't typically take this route. It's not unheard of, but if you search for recommended bike routes or get directions via Google Maps, you will get put on Pine Street. Admittedly, Pine Street is a safer route with a more gradual hill, but it is a lot less direct and biking would be the only method taking a different path.</li>
-    </article>
-    <article id="right">
-      <img src="elephant.jpg" />
-      <img src="bus.jpg" />
-    </article>
-  </main>
-  <footer>
-    <h2>Ryan Flaherty
-    <a href="mailto:rcflaherty@gmail.com">email me</a>
-  </h2>
-  </footer>
+      </article>
+
+      <section id="right" class="green">
+        <h3>Time of Day:</h3>
+           <div class="tEntry", id="morning">Morning</div>
+           <div class="tEntry", id="noon">Noon</div>
+           <div class="tEntry", id="evening">Evening</div>
+           <div class="tEntry", id="night">Night</div>
+          
+        <h3>Mode:</h3>
+          <div class="mEntry", id="walk">Walk</div>
+          <div class="mEntry", id="bike">Bike</div>
+          <div class="mEntry", id="bus">Bus</div>
+          <div class="mEntry", id="car">Car</div>
+          
+        <h3>Travel Time: <span id="foo"><span id="time">(select a time, mode, and then click GO!)</span></span></h3>
+          <div class="go" id="go">GO!</div>
+          <div class="go" id="reset">Reset</div>
+        <br>
+        <img src="elephant.jpg" />
+        <img src="bus.jpg" />
+      </section>
+    </main>
+    <footer>
+      <h2>Ryan Flaherty
+      <a href="mailto:rcflaherty@gmail.com">email me</a>
+    </h2>
+    </footer>
+  </div>
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="traveltime.js"> </script>
+  
 </html>
